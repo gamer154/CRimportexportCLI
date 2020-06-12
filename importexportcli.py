@@ -3,6 +3,7 @@ Usage:
     importexportcli.py
     importexportcli.py -u <username>
     importexportcli.py -s <util> -u <username> -k <apikey> -url <url> -id <botid> -pkg <packages> -l <location>
+    importexportcli.py -s <util> -u <username> -k <apikey> -url <url> -l <location>
     importexportcli.py -h|--help
     importexportcli.py -v|--version
 Options:
@@ -12,7 +13,7 @@ Options:
     <url>  Mandatory argument for Control Room URL. Example: 'http://CRurl.com/'
     <botid>  Mandatory argument for fileID of the check-in bot. 
     <packages>  Mandatory argument to include packages with the export. Example: true or false
-    <location>  Mandatory argument for where to export the bot. Needs to include the full path of the zip file. Example: C:/ExportDirectory/test1.zip
+    <location>  Mandatory argument for where to import or export the bot. Needs to include the full path of the zip file. Example: C:/ExportDirectory/test1.zip
     -h --help  Show this screen.
     -v --version  Show version.
 """
@@ -94,6 +95,16 @@ def downloadfile(url, token, reqid, location):
     with open(location, mode='wb') as localfile:
         localfile.write(response.content)
 
+def importbot(url, user, apikey, location):
+    token = CRauth(url, user, apikey)
+    crqurl = url+"v2/blm/import"
+    payload = {'publicWorkspace': 'true','actionIfExisting': 'OVERWRITE'}
+    files = [('upload', open(location,'rb'))]
+    headers = {'X-Authorization': token}
+    response = requests.post(crqurl, headers=headers, data = payload, files = files)
+    output = response.json()
+    return "Import Request Submitted"
+
 
 #print(exportbot(CRurl, Username, apiKey1, botname1, botid1, "false"))
 
@@ -103,10 +114,12 @@ def downloadfile(url, token, reqid, location):
 
 #exportbot(CRurl, Username, apiKey1, botid1, "true", location1)
 
-arguments = docopt(__doc__, version='DEMO 1.0')
+arguments = docopt(__doc__, version='2.0')
 if arguments['<util>'] == 'Export':
     print(exportbot(arguments['<url>'], arguments['<username>'], arguments['<apikey>'], arguments['<botid>'], arguments['<packages>'], arguments['<location>']))
     #print(arguments['<url>'], arguments['<username>'], arguments['<apikey>'], arguments['<botid>'], arguments['<packages>'], arguments['<location>'])
+elif arguments['<util>'] == 'Import':
+    print(importbot(arguments['<url>'], arguments['<username>'], arguments['<apikey>'], arguments['<location>']))
 elif arguments['<username>']:
     print(arguments['<username>'])
 else:
