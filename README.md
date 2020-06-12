@@ -35,7 +35,6 @@ Switches:
 
 Contstaints:
 -----------
-* Only export is supported right now. 
 * You will need to know the bot file ID which you can get from the control room. 
 * You will need to specify exactly where you are trying to export. All the backslashes in the path needs to be changed to forward slashes (e.g: C:\ExportFolder\exportedbot.zip needs to be C:/ExportFolder/exportedbot.zip). 
 * You will need to escape any special characters in your apikey if you keep seeing the help message.
