@@ -5,7 +5,7 @@ This utility uses python libraries to interact with Control Room BLM APIs.
 
 Version:
 -----------
-1.0 - 06/11/2020
+1.0 - 06/11/2020 /n
 2.0 - 06/11/2020
 
 Usage:
