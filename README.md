@@ -10,6 +10,7 @@ Version:
 Usage:
 -----------
 * importexportcli.py -s <\util> -u <\username> -k <\apikey> -url <\url> -id <\botid> -pkg <\packages> -l <\location>
+* importexportcli.py -s <\util> -u <\username> -k <\apikey> -url <\url> -l <\location>
 * importexportcli.py -h|--help
 * importexportcli.py -v|--version
 
@@ -40,7 +41,6 @@ Contstaints:
 
 Future:
 -----------
-* Add import capability to public folder.
 * Add some sort of error handling and feedback. 
 * Add prompt to ask for details.
 * Add requirements.txt file. 

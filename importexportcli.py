@@ -27,18 +27,6 @@ import string
 import random
 from docopt import docopt
 
-# Test Parameters
-'''
-CRurl = 'http://linuxa2019/'
-Username = 'apiuser'
-apiKey1 = '" ;e7ew(FSZM$<FQ]w4(n~ajnkX5&A22Pp\+|1OP'
-botname1 = "Exportbottst123"
-botid1 = '996'
-token1 = 'eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiI2IiwiY2xpZW50VHlwZSI6IldFQiIsImxpY2Vuc2VzIjpbIkFOQUxZVElDU0NMSUVOVCJdLCJhbmFseXRpY3NMaWNlbnNlc1B1cmNoYXNlZCI6eyJBbmFseXRpY3NDbGllbnQiOnRydWUsIkFuYWx5dGljc0FQSSI6dHJ1ZX0sInRlbmFudFV1aWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJoeWJyaWRUZW5hbnQiOiIiLCJpYXQiOjE1OTE5MDQwMTcsImV4cCI6MTU5MTkwNTIxNywiaXNzIjoiQXV0b21hdGlvbkFueXdoZXJlIiwibmFub1RpbWUiOjM3NTk2OTMwODU1NzQ4MDB9.WfPiiUEfRoo3GMnpj_YRMPG0lec95teQof3qFSBznzT4YVC6U9PpGyjoc_JQUSPEJTjd61T5EQYs2ZxtZWZQ2n8Z-cLuuCQ0Aj4Bu_0DgD2tZum5xS678VjHrwL4s38e0NyvFiXEEoMoI71W2g6tP4TNZfzRcRNLpzr_KjjjAZU-iQtbT9VyNZsea3irahkSGWxX9xfd0REnaA9sr7z9qynj35Yjc8KpbQHTvXGRjWhhkVYrxbVB2H9oNHs7Bj1Rs7i-N9tc1gHk7WE7oRriHpj-zt6pJKwaxjUprKqfwgJ7-WhFBVMZ9uKXH0ONl5wGQKq4syBX-jpPf29sJfliLg'
-reqid1 = 'f79a8ac9-9905-4ed0-ba5e-b8a8ee18bcfb'
-location1 = 'C:/Users/shoaibali/OneDrive - Automation Anywhere/Testing/CICDtesting/test1.zip'
-'''
-
 def randomString(stringLength=8):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
