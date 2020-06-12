@@ -6,6 +6,7 @@ This utility uses python libraries to interact with Control Room BLM APIs.
 Version:
 -----------
 1.0 - 06/11/2020
+2.0 - 06/11/2020
 
 Usage:
 -----------
@@ -16,7 +17,8 @@ Usage:
 
 Examples:
 -----------
-* python importexportcli.py -s 'Export' -u 'apiuser' -k '"" ;e7ew(FSZM$<FQ]w4(n~ajnkX5&A22Pp\+|1OP' -url 'http://linuxa2019/' -id '996' -pkg 'false' -l 'C:/exportedfolder/exportbot.zip'
+* python importexportcli.py -s 'Export' -u 'apiuser' -k 'apikey' -url 'http://CRurl.com/' -id '8' -pkg 'false' -l 'C:/exportedfolder/exportbot.zip'
+* python importexportcli.py -s 'Import' -u 'apiuser' -k 'apikey' -url 'http://CRurl.com/' -l 'C:/exportedfolder/exportbot.zip'
 * For testing purpose, following can be used: python importexportcli.py -u "[Your testing parameter]"
 
 Switches:
