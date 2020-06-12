@@ -37,6 +37,12 @@ Switches:
 * -h --help  Show this screen.
 * -v --version  Show version.
 
+Python Library Dependencies:
+-----------
+requests </br>
+docopt </br>
+* Note: You can use pip to install the dependencies listed above. Example: pip install requests
+
 Contstaints:
 -----------
 * You will need to know the bot file ID which you can get from the control room. 
